@@ -16,7 +16,7 @@
 </head>
 <body class="shower list">
     <header class="caption">
-        <h1>C# 9, Rekordy i duże zmian w .NET 5/h1>
+        <h1>C# 9, Rekordy i duże zmian w .NET 5</h1>
         <p></p>
     </header>
 
@@ -157,6 +157,12 @@
     <section class="slide creamGrey">
         <span class="shout colors" ><span>Wiem, że wielu programistów nie może się doczekać na .NET MAUI, ale to dopiero w .NET 6 czyli za rok.
         </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/projketaspnectcore.gif" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
     </section>
     <section class="slide creamGrey">
         <span class="shout colors" ><span>Visual Studio 2019 v16.8 i co tam nowego
@@ -1170,8 +1176,8 @@
                 <h2 class="headerCODE">Patter Matching w switch : Relational pattern</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 20px !important;">
                         public class GreenTest : Test
                         {
                     
@@ -1212,8 +1218,8 @@
                 <h2 class="headerCODE">Patter Matching w switch : Relational pattern</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 18px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 28px !important;">
                         var exampleList = CreateExample();
 
                         foreach (var test in exampleList)
@@ -1249,8 +1255,8 @@
                 <h2 class="headerCODE">Is not</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 20px !important;">
                         PirateModel m1 = new PirateModel
                         { Name = "Luffy", CrewName = "StrawHats", Id = 1 };
             
@@ -1302,8 +1308,8 @@
                 <h2 class="headerCODE">Czy Rekordy są typem wartościowym, czy typem referencyjnym?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 29px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 29px !important;">
                         public record Record1(string FirstName, string LastName);
 
                         //Czy Rekordy są typem wartościowym, 
@@ -1324,14 +1330,15 @@
     <section class="slide prism over bhgry">
         <div class="grid-container">
             <div class="HeaderTitle"> 
-                <h2 class="headerCODE">Deconstructor</h2>
+                <h2 class="headerCODE">Czy Rekordy są typem wartościowym, czy typem referencyjnym?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 37px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 37px !important;">
                         Record1 rA = new(1, 2);
                         Record1 rAtest = rA;
                         Console.WriteLine(ReferenceEquals(rA, rAtest));
+
                         //true
                     </code>
                 </pre>
@@ -1360,7 +1367,8 @@
             <div class="PlaceCodeHere">
                 <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
                     <code style="line-height: 30px !important;">
-                        //czy rekord wygląda tak
+                        //Czy rekord jako klasa wygląda tak
+
                         public class Record2
                         {
                             public string FirstNumber { get; set; }
@@ -1390,6 +1398,7 @@
                     <code style="line-height: 30px !important;">
                         //Podobne do tej klasy, ale to jednak nie to samo
                         //o tym za chwilę
+
                         public class Record3
                         {
                             public string FirstNumber { get; init; }
@@ -1421,9 +1430,10 @@
                 <h2 class="headerCODE">Czy Rekordy są typem wartościowym, czy typem referencyjnym?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
-                        //to jest poprawny rekord
+                <pre style="font-size: 40px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 40px !important;">
+                        //To jest poprawny rekord
+
                         public record Record4
                         {
                             public int Number1 { get; set; }
@@ -1452,8 +1462,8 @@
                 <h2 class="headerCODE">Czy rekordy są immutable?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 28px !important;">
                         public record Record1(string FirstName, string LastName);
 
                         //Jest immutable czyli wartości w nim nie mogą być zmienione
@@ -1476,8 +1486,10 @@
                 <h2 class="headerCODE">Czy rekordy są immutable?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 40px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 40px !important;">
+                        //Tutaj jest problem z nie jasnym działem rekordu
+
                         public record Record4
                         {
                             public int Number1 { get; set; }
@@ -1529,15 +1541,79 @@
                 <h2 class="headerCODE">Rekordy, Klasy i metoda Equals, ReferenceEquals, ==, !=, GetHashCode()</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 27px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 27px !important;">
+                        public class Class3
+                        {
+                            public int FirstNumber { get; init; }
+                    
+                            public int SecondNumber { get; init; }
+                    
+                            public Class3(int firstNumber, int secondNumber)
+                            {
+                                FirstNumber = firstNumber;
+                                SecondNumber = secondNumber;
+                            }
+
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Rekordy, Klasy i metoda Equals, ReferenceEquals, ==, !=, GetHashCode()</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 40px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 40px !important;">
                         Record1 rA = new(1, 2);
                         Record1 rB = new(1, 2);
                         Record1 rC = new(100, 200);
             
-                        Record3 classA = new(1, 2);
-                        Record3 classB = new(1, 2);
-                        Record3 classC = new(100, 200);
+                        Class3 classA = new(1, 2);
+                        Class3 classB = new(1, 2);
+                        Class3 classC = new(100, 200);
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Rekordy, Klasy i metoda Equals, ReferenceEquals, ==, !=, GetHashCode()</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 22px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 30px !important;">
+                        Console.WriteLine($"Record1 rA = new(1, 2);");
+                        Console.WriteLine($"Record1 rB = new(1, 2);");
+                        Console.WriteLine($"Check if they are Equal : {Equals(rA, rB)}");
+
+                        Console.WriteLine("***");
+
+                        Console.WriteLine($"Class3 classA = new(1, 2);");
+                        Console.WriteLine($"Class3 classB = new(1, 2);");
+                        Console.WriteLine($"Check if they are Equal : {Equals(classA, classB)}");
                     </code>
                 </pre>
             </div>
@@ -1563,12 +1639,15 @@
                 <h2 class="headerCODE">Rekordy, Klasy i metoda Equals, ReferenceEquals, ==, !=, GetHashCode()</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
+                <pre style="font-size: 22px;overflow: hidden;  " class="language-csharp">
                     <code style="line-height: 30px !important;">
                         Console.WriteLine($"Record1 rA = new(1, 2);");
                         Console.WriteLine($"Record1 rB = new(1, 2);");
+            
                         Console.WriteLine($"Check if they are Equal : {Equals(rA, rB)}");
-                        Console.WriteLine($"Check if they are ReferenceEquals : {ReferenceEquals(rA, rB)}");
+            
+                        Console.WriteLine($"Check if they are ReferenceEquals :" +
+                            $"{ ReferenceEquals(rA, rB)}");
                     </code>
                 </pre>
             </div>
@@ -1594,12 +1673,16 @@
                 <h2 class="headerCODE">Rekordy, Klasy i metoda Equals, ReferenceEquals, ==, !=, GetHashCode()</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
+                <pre style="font-size: 22px;overflow: hidden;  " class="language-csharp">
                     <code style="line-height: 30px !important;">
                         Console.WriteLine($"Record1 rA = new(1, 2);");
                         Console.WriteLine($"Record1 rB = new(1, 2);");
+
                         Console.WriteLine($"Check if they are Equal : {Equals(rA, rB)}");
-                        Console.WriteLine($"Check if they are ReferenceEquals : {ReferenceEquals(rA, rB)}");
+
+                        Console.WriteLine($"Check if they are ReferenceEquals 
+                        : {ReferenceEquals(rA, rB)}");
+
                         Console.WriteLine($"Check if they are == : {rA == rB}");
                     </code>
                 </pre>
@@ -1623,20 +1706,26 @@
     <section class="slide prism over bhgry">
         <div class="grid-container">
             <div class="HeaderTitle"> 
-                <h2 class="headerCODE">Rekordy, Klasy i metoda Equals, ReferenceEquals, ==, !=, GetHashCode()</h2>
+                <h2 class="headerCODE">Jak to wygląda z rekordami</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
+                <pre style="font-size: 22px;overflow: hidden;  " class="language-csharp">
                     <code style="line-height: 30px !important;">
                         Console.WriteLine($"Record1 rA = new(1, 2);");
                         Console.WriteLine($"Record1 rB = new(1, 2);");
+
                         Console.WriteLine($"Check if they are Equal : {Equals(rA, rB)}");
-                        Console.WriteLine($"Check if they are ReferenceEquals : {ReferenceEquals(rA, rB)}");
+
+                        Console.WriteLine($"Check if they are ReferenceEquals : 
+                        {ReferenceEquals(rA, rB)}");
+
                         Console.WriteLine($"Check if they are == : {rA == rB}");
+
                         Console.WriteLine($"Hash Code rA: {rA.GetHashCode()}");
                         Console.WriteLine($"Hash Code rB: {rB.GetHashCode()}");
                         Console.WriteLine($"Record1 rC = new(100, 200);");
                         Console.WriteLine($"Hash Code rC: {rC.GetHashCode()}");
+
                         Console.WriteLine($"Check if they are != : {rA != rC}");
                     </code>
                 </pre>
@@ -1660,20 +1749,25 @@
     <section class="slide prism over bhgry">
         <div class="grid-container">
             <div class="HeaderTitle"> 
-                <h2 class="headerCODE">Rekordy, Klasy i metoda Equals, ReferenceEquals, ==, !=, GetHashCode()</h2>
+                <h2 class="headerCODE">Jak jest z klasami?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
+                <pre style="font-size: 22px;overflow: hidden;  " class="language-csharp">
                     <code style="line-height: 30px !important;">
                         Console.WriteLine($"Record3 classA = new(1, 2);");
                         Console.WriteLine($"Record3 classB = new(1, 2);");
+
                         Console.WriteLine($"Check if they are Equal : {Equals(classA, classB)}");
-                        Console.WriteLine($"Check if they are ReferenceEquals : {ReferenceEquals(classA, classB)}");
+                        Console.WriteLine($"Check if they are ReferenceEquals : 
+                        {ReferenceEquals(classA, classB)}");
+
                         Console.WriteLine($"Check if they are == : {classA == classB}");
+
                         Console.WriteLine($"Hash Code rA: {classA.GetHashCode()}");
                         Console.WriteLine($"Hash Code rB: {classB.GetHashCode()}");
                         Console.WriteLine($"Record3 classC = new(100, 200);");
                         Console.WriteLine($"Hash Code rC: {classC.GetHashCode()}");
+
                         Console.WriteLine($"Check if they are != : {classA != classC}");
                     </code>
                 </pre>
@@ -1694,6 +1788,24 @@
             <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
         </figure>
     </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/rekordy-12.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/rekordy-13.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/Stackoverflow-01.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
     <section class="slide creamGrey">
         <span class="shout colors" ><span>Deconstructor
         </span></span>
@@ -1704,8 +1816,8 @@
                 <h2 class="headerCODE">Deconstructor</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 50px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 50px !important;">
                         Record1 rA = new(1, 2);
 
                         var (a, b) = rA;
@@ -1740,8 +1852,8 @@
                 <h2 class="headerCODE">Deconstructor</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 25px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 25px !important;">
                         public class Record3
                         {
                             public int FirstNumber { get; init; }
@@ -1789,8 +1901,8 @@
                 <h2 class="headerCODE">Klonownie shallow</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 35px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 35px !important;">
                         Record1 rA = new(1, 2);
                         Record1 rAtest = rA;
                         Console.WriteLine(ReferenceEquals(rA, rAtest));
@@ -1822,9 +1934,9 @@
                 <h2 class="headerCODE">Czy można utworzyć rekordy generyczne?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
-                        public record Data<T>(int id, T Data);
+                <pre style="font-size: 40px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 40px !important;">
+                        public record Data&#x3C;T&#x3E;(int id, T Data);
                     </code>
                 </pre>
             </div>
@@ -1848,16 +1960,16 @@
                 <h2 class="headerCODE">Czy rekordy mogą implementować interfejs</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
-                        public interface IProduct<T>
+                <pre style="font-size: 40px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 40px !important;">
+                        public interface IProduct&#x3C;T&#x3E;
                         {
                            T Data { get; }
                         }
 
-                        public record Game<T> : Audit ,IProduct<T>
+                        public record Game&#x3C;T&#x3E; : Audit ,IProduct&#x3C;T&#x3E;
                         {
-                               public T Data { get; init; }
+                            public T Data { get; init; }
                         }
                     </code>
                 </pre>
@@ -1872,36 +1984,7 @@
             </div>
         </div>
     </section>
-    <section class="slide prism over bhgry">
-        <div class="grid-container">
-            <div class="HeaderTitle"> 
-                <h2 class="headerCODE">Czy rekordy mogą implementować interfejs</h2>
-            </div>
-            <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
-                        public interface IProduct<T>
-                        {
-                           T Data { get; }
-                        }
 
-                        public record Game<T> : Audit ,IProduct<T>
-                        {
-                               public T Data { get; init; }
-                        }
-                    </code>
-                </pre>
-            </div>
-            <div class="AnswerCode">
-                <div class="pytanie">
-                    <h3></h3>
-                </div>
-                <div class="odpowiedz">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="slide" style="background-color:black">
         <figure>
             <img class="cover" src="pictures/rekordy-10.png" alt="blog">
@@ -1924,8 +2007,8 @@
                 <h2 class="headerCODE">Czy rekordy mogą implementować interfejs</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 40px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 40px !important;">
                         public partial record Data(string Name);
                     </code>
                 </pre>
@@ -1950,7 +2033,7 @@
                 <h2 class="headerCODE">Czy rekordy mogą użyć atrybutów?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
+                <pre style="font-size: 24px;overflow: hidden;  " class="language-csharp">
                     <code style="line-height: 30px !important;">
                         public record Data([property:JsonPropertyName("dataName")] string Name, 
                            [property:JsonPropertyName("dataCity")]string City);
@@ -1977,15 +2060,44 @@
                 <h2 class="headerCODE">Czy rekordy mogą użyć atrybutów?</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
+                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
                     <code style="line-height: 30px !important;">
                         [AttributeUsage(AttributeTargets.All)]
-                        class FooAttribute : Attribute
+                        class MyAttribute : Attribute
                         {
-                           public FooAttribute(string _) { }
+                           public MyAttribute(string _) { }
                         }
                          
-                        public record Data([Foo("param")][field:Foo("field")][property:Foo("prop")] string Name);
+                        public record Data([My("param")][field:My("field")][property:My("prop")] string Name);
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Czy rekordy mogą użyć atrybutów?</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 30px !important;">
+                        public record Numbers
+                        {
+                            [JsonPropertyName("One")]
+                            public string First { get; init; }
+                    
+                            [JsonPropertyName("Two")]
+                            public string Second { get; init; }
+                        }
                     </code>
                 </pre>
             </div>
@@ -2000,53 +2112,431 @@
         </div>
     </section>
     <section class="slide creamGrey">
-        <span class="shout colors" >Dodanie metod i właściwości do rekordów<span>
+        <span class="shout colors" ><span>
+            Dodanie metod i właściwości do rekordów
         </span></span>
     </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" > Dziedziczenie rekordów<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" > Zalety<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" >Kiedy ich użyć?<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" >Kiedy ich nie użyć?<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" >.NET 5<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" >Co to oznacza dla nas ?<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" >Czego nie lubię w C# i w .NET ?<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" >Visual Studio Enable Just My XAML in Live Visual Tree<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" >Visual Studio Apply XAML Hot Reload on Document save<span>
-        </span></span>
-    </section>
-    <section class="slide creamGrey">
-        <span class="shout colors" >Publikowanie aplikacji WPF i Windows Forms w .NET 5<span>
-        </span></span>
-    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dodanie metod i właściwości do rekordów</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 30px !important;">
+                        //To jest tutaj problem z nie jasnym działem rekordu
 
+                        public record Record4
+                        {
+                            public int Number1 { get; set; }
+                            public int Number2 { get; set; }
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dodanie metod i właściwości do rekordów</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 30px !important;">
+                        public record Record5(int FirstNumber, int SecondNumber);
+
+                        public record Record6(int FirstNumber, int SecondNumber)
+                        {
+                            internal int SecondNumber { get; init; } = SecondNumber;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="slide" style="background-color:black">
         <figure>
-            <img class="cover" src="pictures/prelekcja.PNG" alt="blog">
+            <img class="cover" src="pictures/rekordy-14.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dodanie metod i właściwości do rekordów</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 30px !important;">
+                        public record Record7(int FirstNumber, int SecondNumber)
+                        {
+                            internal int SecondNumber { get; init; } = SecondNumber;
+                    
+                            public string JavaScriptLikeSumOfNumbers { get => $"{FirstNumber}{SecondNumber}"}
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dodanie metod i właściwości do rekordów</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 30px !important;">
+                        public record Record8(int FirstNumber, int SecondNumber)
+                        {
+                            public (int,int) ReturnHasCodes()
+                            {
+                                return (FirstNumber.GetHashCode(), SecondNumber.GetHashCode());
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/rekordy-15.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Dziedziczenie rekordów
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/rekordy-16.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span> Zalety
+        </span></span>
+    </section>
+    <section class="slide cream compact smaller">
+        <h2>Zalety Rekordów</h2>
+        <ol>
+            <li class="next">Krótsza składnia</li>
+            <li class="next">Thread-safe - why -> it is immutable</li>
+            <li class="next">Łatwe w użyciu</li>
+        </ol>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Kiedy ich użyć?
+        </span></span>
+    </section>
+    <section class="slide cream compact smaller">
+        <h2>Kiedy ich użyć?</h2>
+        <ol>
+            <li class="next">Gdy masz dane które wiesz, że mają się nie zmieniać</li>
+            <li class="next">Do wywołania API</li>
+            <li class="next">Do przetwarzania danych</li>
+            <li class="next">Gdy masz dane tylko do odczytu</li>
+        </ol>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Kiedy ich nie użyć?
+        </span></span>
+    </section>
+    <section class="slide cream compact smaller">
+        <h2>Kiedy ich użyć?</h2>
+        <ol>
+            <li class="next">Kiedy musisz zmienić dane (Entity framework)</li>
+        </ol>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>.NET 5
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/net_01.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/net_02.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/net_03.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/net_04.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/dotnet5_platform.jpg" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/dotnet5_platform2.jpg" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/projketaspnectcore.gif" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Pytanie czy słowo "Core" zniknie z ASP.NET Core
+        </span></span>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Oficjalna nazwa to ASP.NET Core for .NET 5
+        </span></span>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Pytanie : Co z przyszłością .NET Standardu
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/net_06.png" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Pytanie : Jaka jest róźnica pomiędzy ASP.NET Core 3.2 a ASP.NET Core for .NET 5
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/twitter-06.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Co to oznacza dla nas ?
+        </span></span>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>Czego nie lubię w C# i w .NET ?
+        </span></span>
+    </section>
+    <section class="slide cream compact ">
+        <h2>Czego nie lubię w C# i w .NET ?</h2>
+        <ol>
+            <li class="next">Historia C# i Microsoftu i nienawiść od OpenSource</li>
+            <li class="next">Teraz C# i .NET jest opensource</li>
+            <li class="next">Jest dobrze być teraz programistą </li>
+        </ol>
+    </section>
+    <section class="slide cream compact ">
+        <h2>Czego nie lubię w C# i w .NET ?</h2>
+        <ol>
+            <li class="next">.NET ciągle stoi z rozwojem aplikacji typu desktop : WPF i Windows Form, UWP</li>
+            <li class="next">WPF i Windows Form, UWP są .NET CORE 5, ale działają tylko na Windows</li>
+            <li class="next">Jak myślisz dlatego w ich nazwach jest "Windows"</li>
+        </ol>
+    </section>
+    <section class="slide cream compact ">
+        <h2>Czego nie lubię w C# i w .NET ?</h2>
+        <ol>
+            <li class="next">C# powoli jak JavaScript staje językiem w którym możesz zrobic 1 rzecz na 10 sposobów</li>
+            <li class="next">Nie koniecznie jest do dobre dla początkujących programistów</li>
+        </ol>
+    </section>
+    <section class="slide cream compact ">
+        <h2>Czego nie lubię w C# i w .NET ?</h2>
+        <ol>
+            <li class="next">Co z tego, że mamy C# 9.0 jak w pracy mogę korzystać z C# 5.0 MAX</li>
+            <li class="next">Powiedz to rekruterowi który tydzień po premierze pyta mnie "co nowego jest w C# 9"</li>
+            <li class="next">Powiedz to rekruterowi który oczekuje od Ciebie napisana Pattern Matching na współdzielonym ekranie</li>
+        </ol>
+    </section>
+    <section class="slide cream compact ">
+        <h2>Czego nie lubię w C# i w .NET ?</h2>
+        <ol>
+            <li class="next">Autogenerowana dokumentacja w paru miejsach w technologiach Microsoftu</li>
+            <li class="next">Nazewnictwo wersji .NET jest skopane. Przypomina to problem z XBOX-em</li>
+        </ol>
+    </section>
+    <section class="slide cream compact ">
+        <h2>Czego nie lubię w C# i w .NET ?</h2>
+        <ol>
+            <li class="next">.NET zawsze jest trochę do tyłu z trendami : gRPC</li>
+        </ol>
+    </section>
+    <section class="slide cream compact ">
+        <h2>Co ludzie chcą od C# ?</h2>
+        <ol>
+            <li class="next">Null should be removed.</li>
+            <li class="next">Strings based on utf8 and utf32 for characters</li>
+            <li class="next">Removal of pre-generic list types</li>
+            <li class="next">Improved resource handling (globalization). The API:s are not good</li>
+        </ol>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>
+            Bonus
+        </span></span>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>
+            WPF
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-05.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-09.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>
+            Visual Studio Apply XAML Hot Reload on Document save
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-01.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-02.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-HOTRELOAD.gif" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGrey">
+        <span class="shout colors" ><span>
+            Publikowanie aplikacji WPF i Windows Forms w .NET 5
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-03.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-04.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-06.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-07.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-08.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-10.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-12.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-13.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-14.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/wpfpublish.gif" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/wpfpublish2.gif" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WPF-15.PNG" alt="blog">
             <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
         </figure>
     </section>
@@ -2055,9 +2545,6 @@
         <span class="shout colors"><span>Dzięki za obecność
         </span></span>
     </section>
-
-   
-
 
     <!-- <div class="progress"></div> -->
     <footer class="badge badge-top-left">
