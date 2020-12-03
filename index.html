@@ -2293,7 +2293,7 @@
         </span></span>
     </section>
     <section class="slide cream compact smaller">
-        <h2>Kiedy ich użyć?</h2>
+        <h2>Kiedy ich nie użyć?</h2>
         <ol>
             <li class="next">Kiedy musisz zmienić dane (Entity framework)</li>
         </ol>
@@ -2304,7 +2304,7 @@
                 <h2 class="headerCODE">Inne zmiany : Natywne Int</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
+                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
                     <code style="line-height: 30px !important;">
                         nint nativeInt = 55;
 
@@ -2333,8 +2333,8 @@
                 <h2 class="headerCODE">Inne zmiany : Discard w Lambda</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 30px !important;">
+                <pre style="font-size: 40px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 40px !important;">
                         Func&#x3C;int,int,int&#x3E; zero = (_,_) =&#x3E; 0;
                     </code>
                 </pre>
@@ -2355,12 +2355,13 @@
                 <h2 class="headerCODE">Inne zmiany : partial w metodzie</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 20px !important;">
+                <pre style="font-size: 30px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 30px !important;">
                         partial class Doing
                         {
                             internal partial bool DoSomething(string s, out int i);
                         }
+
                         partial class Doing
                         {
                             internal partial bool DoSomething(string s, out int i)
@@ -2388,8 +2389,8 @@
                 <h2 class="headerCODE">Inne zmiany : Konwariancyjne typy zwracane</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 20px !important;">
+                <pre style="font-size: 26px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 26px !important;">
                         public virtual Cat GetCat()
                         {
                             // This is the parent (or base) class.
@@ -2420,8 +2421,8 @@
                 <h2 class="headerCODE">Inne zmiany : Konwariancyjne typy zwracane</h2>
             </div>
             <div class="PlaceCodeHere">
-                <pre style="font-size: 20px;overflow: hidden;  " class="language-csharp">
-                    <code style="line-height: 20px !important;">
+                <pre style="font-size: 26px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 26px !important;">
                         public virtual Cat GetCat()
                         {
                             // This is the parent (or base) class.
@@ -2444,6 +2445,12 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/WHAT.PNG" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
     </section>
     <section class="slide prism over bhgry">
         <div class="grid-container">
